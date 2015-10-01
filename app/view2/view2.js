@@ -10,11 +10,11 @@ angular.module('myApp.view2', ['ngRoute'])
      }])*/
 
     .controller('View2Ctrl', ['$scope', '$http', '$q', function (s, $http, $q) {
-        /*$http.defaults.headers.put = {
+        $http.defaults.headers.put = {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
-        };*/
+        };
         $http.defaults.useXDomain = true;
         delete $http.defaults.headers.common['X-Requested-With'];
         s.verdicts = [

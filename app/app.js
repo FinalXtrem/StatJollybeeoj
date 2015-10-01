@@ -7,7 +7,7 @@ angular.module('myApp', [
     'myApp.view2',
     'myApp.version'
 ]).
-    config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'view1/view1.html',
@@ -26,4 +26,9 @@ angular.module('myApp', [
             enabled: true,
             requireBase: false
         });*/
+        $httpProvider.defaults.useXDomain = true;
+        $httpProvider.defaults.withCredentials = true;
+        delete $httpProvider.defaults.headers.common["X-Requested-With"];
+        $httpProvider.defaults.headers.common["Accept"] = "application/json";
+        $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
     }]);

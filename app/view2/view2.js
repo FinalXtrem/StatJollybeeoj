@@ -16,6 +16,7 @@ angular.module('myApp.view2', ['ngRoute'])
             'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
         };*/
         $http.defaults.useXDomain = true;
+        delete $http.defaults.headers.common['X-Requested-With'];
         s.verdicts = [
             'Accepted',
             'Output Limit Exceeded',

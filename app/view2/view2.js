@@ -111,6 +111,7 @@ angular.module('myApp.view2', ['ngRoute'])
                 });
         };
         s.sortNim = function(){
+            i = 7;
             if (s.sorted.selected != i) {
                 s.sorted.selected = i;
                 s.sorted.asc = 0;
@@ -128,6 +129,7 @@ angular.module('myApp.view2', ['ngRoute'])
                 });
         };
         s.sortName = function(){
+            i = 8;
             if (s.sorted.selected != i) {
                 s.sorted.selected = i;
                 s.sorted.asc = 0;
@@ -145,6 +147,7 @@ angular.module('myApp.view2', ['ngRoute'])
                 });
         };
         s.sortUser = function(){
+            i = 9;
             if (s.sorted.selected != i) {
                 s.sorted.selected = i;
                 s.sorted.asc = 0;

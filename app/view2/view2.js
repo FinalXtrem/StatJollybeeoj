@@ -139,11 +139,11 @@ angular.module('myApp.view2', ['ngRoute'])
             }
             if (s.sorted.asc == 0)
                 s.userData.sort(function (a, b) {
-                    return b.name - a.name;
+                    return b.name.localeCompare(a.name);
                 });
             else
                 s.userData.sort(function (a, b) {
-                    return a.name - b.name;
+                    return a.name.localeCompare(b.name);
                 });
         };
         s.sortUser = function(){
@@ -157,11 +157,11 @@ angular.module('myApp.view2', ['ngRoute'])
             }
             if (s.sorted.asc == 0)
                 s.userData.sort(function (a, b) {
-                    return b.username - a.username;
+                    return b.username.localeCompare(a.username);
                 });
             else
                 s.userData.sort(function (a, b) {
-                    return a.username - b.username;
+                    return a.username.localeCompare(b.username);
                 });
         };
     }]);

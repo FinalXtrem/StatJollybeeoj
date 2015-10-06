@@ -3,10 +3,10 @@
     <thead>
     <tr>
         <th>#</th>
-        <th>NIM</th>
-        <th>Name</th>
-        <th>Username</th>
-        <th class="text-center" style="cursor: pointer" ng-repeat="(i, v) in verdictLabel"><a ng-click="sortD(i)">{{v}}</a></th>
+        <th><a ng-click="sortNim()">NIM</a></th>
+        <th><a ng-click="sortName()">Name</a></th>
+        <th><a ng-click="sortUser()">Username</a></th>
+        <th class="text-center" style="cursor: pointer" ng-repeat="(i, v) in verdictLabel"><a ng-click="sortD(i)" title="{{verdicts[i]}}">{{v}}</a></th>
     </tr>
     </thead>
     <tbody>

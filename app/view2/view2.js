@@ -109,7 +109,58 @@ angular.module('myApp.view2', ['ngRoute'])
                 s.userData.sort(function (a, b) {
                     return a.jml[i] - b.jml[i];
                 });
-        }
+        };
+        s.sortNim = function(){
+            if (s.sorted.selected != i) {
+                s.sorted.selected = i;
+                s.sorted.asc = 0;
+            } else {
+                s.sorted.asc++;
+                s.sorted.asc %= 2;
+            }
+            if (s.sorted.asc == 0)
+                s.userData.sort(function (a, b) {
+                    return b.nim - a.nim;
+                });
+            else
+                s.userData.sort(function (a, b) {
+                    return a.nim - b.nim;
+                });
+        };
+        s.sortName = function(){
+            if (s.sorted.selected != i) {
+                s.sorted.selected = i;
+                s.sorted.asc = 0;
+            } else {
+                s.sorted.asc++;
+                s.sorted.asc %= 2;
+            }
+            if (s.sorted.asc == 0)
+                s.userData.sort(function (a, b) {
+                    return b.name - a.name;
+                });
+            else
+                s.userData.sort(function (a, b) {
+                    return a.name - b.name;
+                });
+        };
+        s.sortUser = function(){
+            if (s.sorted.selected != i) {
+                s.sorted.selected = i;
+                s.sorted.asc = 0;
+            } else {
+                s.sorted.asc++;
+                s.sorted.asc %= 2;
+            }
+            if (s.sorted.asc == 0)
+                s.userData.sort(function (a, b) {
+                    return b.username - a.username;
+                });
+            else
+                s.userData.sort(function (a, b) {
+                    return a.username - b.username;
+                });
+        };
     }]);
 
 function getVerdict(json, verdict) {
